@@ -2,15 +2,15 @@ from pyrogram import filters
 
 from pyrogram.types import Message
 
-from AdityaHalder.config import MONGO_DB_URL, OWNER_ID
+from RomeoRJ.config import MONGO_DB_URL, OWNER_ID
 
-from AdityaHalder.modules.clientbot.clientbot import client as app
+from RomeoRJ.modules.clientbot.clientbot import client as app
 
-from AdityaHalder.modules.helpers.command import commandpro
+from RomeoRJ.modules.helpers.command import commandpro
 
-from AdityaHalder.utilities.misc import SUDOERS
+from RomeoRJ.utilities.misc import SUDOERS
 
-from AdityaHalder.utilities.utils import add_sudo, remove_sudo
+from RomeoRJ.utilities.utils import add_sudo, remove_sudo
 
 @app.on_message(
 
