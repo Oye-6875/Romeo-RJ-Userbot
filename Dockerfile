@@ -16,4 +16,4 @@ RUN pip3 install --upgrade pip
 
 RUN pip3 install --no-cache-dir --upgrade --requirement Installer
 
-CMD python3 -m Romeo-RJ
+CMD python3 -m RomeoRJ
