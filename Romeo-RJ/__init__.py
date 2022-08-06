@@ -20,15 +20,15 @@ from rich.table import Table
 
 from motor.motor_asyncio import AsyncIOMotorClient as KaalXD
 
-from AdityaHalder.config import MONGO_DB_URL, LOG_GROUP_ID, OWNER_ID, STRING_SESSION, SUDO_USERS, UPSTREAM_BRANCH, UPSTREAM_REPO
+from Romeo-RJ.config import MONGO_DB_URL, LOG_GROUP_ID, OWNER_ID, STRING_SESSION, SUDO_USERS, UPSTREAM_BRANCH, UPSTREAM_REPO
 
-from AdityaHalder.modules.clientbot.clientbot import client, robot, pytgcalls
+from Romeo-RJ.modules.clientbot.clientbot import client, robot, pytgcalls
 
-from AdityaHalder.utilities.misc import sudo
+from Romeo-RJ.utilities.misc import sudo
 
-from AdityaHalder.utilities.times import time_to_seconds
+from Romeo-RJ.utilities.times import time_to_seconds
 
-from AdityaHalder.utilities.tasks import install_requirements
+from Romeo-RJ.utilities.tasks import install_requirements
 
 loop = asyncio.get_event_loop()
 
@@ -114,7 +114,7 @@ async def initiate_bot():
 
     header.add_column(
 
-        "Genius Userbot : Best Ever Userbot"
+        "Romeo-RJ-Userbot : Best Ever Userbot"
 
     )
 
@@ -122,7 +122,7 @@ async def initiate_bot():
 
     with console.status(
 
-        "[magenta] Genius UserBot Booting...",
+        "[magenta] Romeo-RJ-UserBot Booting...",
 
     ) as status:
 
