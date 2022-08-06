@@ -18,19 +18,19 @@ from rich.table import Table
 
 from youtubesearchpython import VideosSearch
 
-from AdityaHalder.config import LOG_GROUP_ID, STRING_SESSION
+from Romeo-RJ.config import LOG_GROUP_ID, STRING_SESSION
 
-from AdityaHalder import client, robot, pytgcalls, ASSID, ASSNAME, BOT_ID, BOT_NAME, OWNER_ID
+from Romeo-RJ import client, robot, pytgcalls, ASSID, ASSNAME, BOT_ID, BOT_NAME, OWNER_ID
 
-from AdityaHalder.modules.helpers.filters import command
+from Romeo-RJ.modules.helpers.filters import command
 
-from AdityaHalder.modules.helpers.decorators import errors, sudo_users_only
+from Romeo-RJ.modules.helpers.decorators import errors, sudo_users_only
 
-from AdityaHalder.plugins import ALL_MODULES
+from Romeo-RJ.plugins import ALL_MODULES
 
-from AdityaHalder.utilities.inline import paginate_modules
+from Romeo-RJ.utilities.inline import paginate_modules
 
-from AdityaHalder.utilities.misc import SUDOERS
+from Romeo-RJ.utilities.misc import SUDOERS
 
 loop = asyncio.get_event_loop()
 
@@ -68,7 +68,7 @@ async def initiate_bot():
 
             imported_module = importlib.import_module(
 
-                "AdityaHalder.plugins." + all_module
+                "Romeo-RJ.plugins." + all_module
 
             )
 
@@ -112,7 +112,7 @@ async def initiate_bot():
 
     console.print(
 
-        "[bold green] 🥀 Genius Userbot Started ✨\n"
+        "[bold green] 🔥 Romeo-RJ-Userbot Started 🔥\n"
 
     )
 
@@ -122,7 +122,7 @@ async def initiate_bot():
 
             LOG_GROUP_ID,
 
-            "<b> 🥀 Genius UserBot is Here ✨</b>",
+            "<b> 🔥 is Here 🔥</b> Romeo-RJ-Userbot",
 
         )
 
@@ -160,7 +160,7 @@ async def initiate_bot():
 
                 LOG_GROUP_ID,
 
-                "<b>🥀 Genius UserBot is Active ✨</b>",
+                "<b> 🔥 Romeo-RJ-Userbot is Active 🔥</b>",
 
             )
 
@@ -200,7 +200,7 @@ home_text_pm = f"""**ʜᴇʟʟᴏ ,
 
 ᴍʏ ɴᴀᴍᴇ ɪs {BOT_NAME}.
 
-I Aᴍ Gᴇɴɪᴜs, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
+I Aᴍ Romeo-RJ-Userbot, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
 
 @robot.on_message(command(["start"]) & filters.private)
 
@@ -208,11 +208,11 @@ async def start(_, message):
 
     await message.reply_photo(
 
-        photo=f"https://telegra.ph/file/027283ee9defebc3298b8.png",
+        photo=f"https://telegra.ph/file/627581473dd421c161561.jpg",
 
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
 
-💥 Hᴇʟʟᴏ, I Aᴍ Gᴇɴɪᴜs » Aɴ Aᴅᴠᴀɴᴄᴇᴅ
+💥 Hᴇʟʟᴏ, I Aᴍ Romeo-RJ » Aɴ Aᴅᴠᴀɴᴄᴇᴅ
 
 Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
 
@@ -220,15 +220,15 @@ Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
 
 ┣★ Oᴡɴᴇʀ'xD› : [Aᴅɪᴛʏᴀ Hᴀʟᴅᴇʀ](https://t.me/adityahalder)
 
-┣★ Uᴘᴅᴀᴛᴇs ›› : [Aᴅɪᴛʏᴀ Sᴇʀᴠᴇʀ](https://t.me/adityaserver)
+┣★ Uᴘᴅᴀᴛᴇs ›› : [ Sᴇʀᴠᴇʀ](https://t.me/adityaserver)
 
-┣★ Sᴜᴘᴘᴏʀᴛ » : [Aᴅɪᴛʏᴀ Dɪsᴄᴜs](https://t.me/adityadiscus)
+┣★ Sᴜᴘᴘᴏʀᴛ » : [DP Channel](https://t.me/GirlboyDp143)
 
 ┗━━━━━━━━━━━━━━━━━━━┛
 
 💞 Cʟɪᴄᴋ Oɴ Dᴇᴘʟᴏʏ Bᴜᴛᴛᴏɴ Tᴏ Mᴀᴋᴇ
 
-Yᴏᴜʀ Oᴡɴ » Gᴇɴɪᴜs Usᴇʀ Bᴏᴛ.
+Yᴏᴜʀ Oᴡɴ » Romeo-RJ Userbot .
 
 ━━━━━━━━━━━━━━━━━━━━━━━━**""",
 
