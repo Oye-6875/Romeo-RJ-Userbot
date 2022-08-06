@@ -38,4 +38,4 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
 
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Romeo-RJ-143/Romeo-RJ-Userbot")
 
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Romeo-RJ")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "RomeoRJ")
