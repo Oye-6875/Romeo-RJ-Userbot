@@ -1,6 +1,6 @@
 # Romeo-RJ
 
-from AdityaHalder.utilities import dbb
+from Romeo-RJ.utilities import dbb
 
 Rbun = dbb["RBAN"]
 
