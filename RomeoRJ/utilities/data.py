@@ -972,13 +972,13 @@ LOVER_RAID = [
 
     "Jeeni Zindagi Hai Bas Tere Naal😚😚",
 
-    "cause I Love You 😘😘",
+    "cause I need you 😘😘",
 
-    "I Love YoU SO MUCH 😍😍",
+    "I'm very happy with you 😍😍",
 
-    "cause I Love You 😘😘",
+    "oye bol do n 😘😘",
 
-    "I Love YoU SO MUCH 😍😍",
+    "Give me hug 🫂 😍😍",
 
     "Sapno Mein Mere AayI😝😝",
 
@@ -1004,13 +1004,13 @@ LOVER_RAID = [
 
     "Yaara Kade Vi Na Tainu Main Rulawaan🙊🙊",
 
-    "cause I Love You  🙈🙈",
+    "cause I need you 🙈🙈",
 
-    "I Love You ❤️❤️",
+    "you love me 😚❤️",
 
-    "cause I Love You🙈🙈",
+    "Hare mujhe sharm aa gyi🙈🙈",
 
-    "I Love You ❤️❤️",
+    "you will be mine ",
 
     "Yaari Laawan Sachi YaarI💫💫",
 
@@ -1048,11 +1048,11 @@ LOVER_RAID = [
 
     "Aur Hota Nahee Ab Intezaar😘😘",
 
-    "cause I Love You 😍😍",
+    "you are so cute 😍😍",
 
-    "I Love YoU 😙😙",
+    "I'm very happy with you ☺️☺️",
 
-    "cause I Hate you too much",
+    "cause I Hate you too much 🤣😂🤣😂",
 
     "I Hate you 🤣😂😂",
 
@@ -1138,7 +1138,7 @@ LOVER_RAID = [
 
     "Thukra denge jannat ve😌😌",
 
-    "SO MISS 😶😶",
+    "SO MISS KYA KHYAL H  😶😶",
 
     "KYA SOCHA APNE BAARE MAIN😆😆",
 
