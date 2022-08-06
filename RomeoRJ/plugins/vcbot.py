@@ -2,17 +2,17 @@ import re
 
 import asyncio
 
-from AdityaHalder.modules.cache.admins import admins
+from RomeoRJ.modules.cache.admins import admins
 
-from AdityaHalder.modules.helpers.filters import command
+from RomeoRJ.modules.helpers.filters import command
 
-from AdityaHalder.utilities.utils import bash, skip_current_song, skip_item
+from RomeoRJ.utilities.utils import bash, skip_current_song, skip_item
 
-from AdityaHalder.modules.clientbot.queues import QUEUE, add_to_queue, clear_queue
+from RomeoRJ.modules.clientbot.queues import QUEUE, add_to_queue, clear_queue
 
-from AdityaHalder.modules.clientbot import client as app, pytgcalls as aditya
+from RomeoRJ.modules.clientbot import client as app, pytgcalls as aditya
 
-from AdityaHalder.modules.helpers.decorators import sudo_users_only
+from RomeoRJ.modules.helpers.decorators import sudo_users_only
 
 from pyrogram import Client, filters
 
@@ -798,15 +798,15 @@ async def skip(c: Client, m: Message):
 
         elif op == 1:
 
-            await m.reply("**🥀 𝐄𝐦𝐩𝐭𝐲 𝐐𝐮𝐞𝐮𝐞, 𝐋𝐞𝐚𝐯𝐢𝐧𝐠\n𝐅𝐫𝐨𝐦 𝐕𝐂 ✨...**")
+            await m.reply("**🔥 𝐄𝐦𝐩𝐭𝐲 𝐐𝐮𝐞𝐮𝐞, 𝐋𝐞𝐚𝐯𝐢𝐧𝐠\n𝐅𝐫𝐨𝐦 𝐕𝐂 🔥...**")
 
         elif op == 2:
 
-            await m.reply("**🥀 𝐂𝐥𝐞𝐚𝐫𝐢𝐧𝐠 𝐐𝐮𝐞𝐮𝐞, 𝐋𝐞𝐚𝐯𝐢𝐧𝐠\n𝐅𝐫𝐨𝐦 𝐕𝐂 ✨...**")
+            await m.reply("**🔥 𝐂𝐥𝐞𝐚𝐫𝐢𝐧𝐠 𝐐𝐮𝐞𝐮𝐞, 𝐋𝐞𝐚𝐯𝐢𝐧𝐠\n𝐅𝐫𝐨𝐦 𝐕𝐂 🔥...**")
 
         else:
 
-            await m.reply("**🥀 𝐒𝐤𝐢𝐩𝐩𝐞𝐝 💞 ...**",
+            await m.reply("**🔥 𝐒𝐤𝐢𝐩𝐩𝐞𝐝 💞 ...**",
 
             )
 
