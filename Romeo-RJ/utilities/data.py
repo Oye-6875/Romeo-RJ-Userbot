@@ -1486,12 +1486,12 @@ LOVER_RAID = [
 
     "के इंसान तो बच जाता है मगर ज़िंदा नहीं रहता😂💓",
 
-]
 
-GRP = "@adityadiscus|@sanki_world|@kaalmods"
 
-GROUP = []
 
-VERIFIED_USERS = [1282754256, 5336023580, 702821224]
 
-Owners = "@adityahalder|@iamkaal"
+
+
+
+
+
