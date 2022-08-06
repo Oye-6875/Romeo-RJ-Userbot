@@ -122,7 +122,7 @@ async def initiate_bot():
 
             LOG_GROUP_ID,
 
-            "<b> 🔥 is Here 🔥</b> Romeo-RJ-Userbot",
+            "<b> 🔥 Romeo-RJ-Userbot is Here 🔥</b> Romeo-RJ-Userbot",
 
         )
 
@@ -190,7 +190,7 @@ async def initiate_bot():
 
         console.print(f"├[green] ID :- {ASSID}")
 
-        console.print(f"└[red] ✅ Genius UserBot Boot Complete 💯 ...")
+        console.print(f"└[red] ✅ Romeo-RJ-Userbot Boot Complete 💯 ...")
 
         await idle()
 
@@ -218,9 +218,9 @@ Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
 
 ┏━━━━━━━━━━━━━━━━━━━┓
 
-┣★ Oᴡɴᴇʀ'xD› : [Aᴅɪᴛʏᴀ Hᴀʟᴅᴇʀ](https://t.me/adityahalder)
+┣★ Oᴡɴᴇʀ'xD› : [Romeo-RJ](https://t.me/Romeo_RJ_143)
 
-┣★ Uᴘᴅᴀᴛᴇs ›› : [ Sᴇʀᴠᴇʀ](https://t.me/adityaserver)
+┣★ Uᴘᴅᴀᴛᴇs ›› : [ channel](https://t.me/GirlboyDp143)
 
 ┣★ Sᴜᴘᴘᴏʀᴛ » : [DP Channel](https://t.me/GirlboyDp143)
 
@@ -240,7 +240,7 @@ Yᴏᴜʀ Oᴡɴ » Romeo-RJ Userbot .
 
                     InlineKeyboardButton(
 
-                        "💥 Dᴇᴘʟᴏʏ Gᴇɴɪᴜs UsᴇʀBᴏᴛ ✨", url=f"https://github.com/GeniusBoi/Genius-UserBot")
+                        "💥 Dᴇᴘʟᴏʏ Romeo-RJ UsᴇʀBᴏᴛ ✨", url=f"https://github.com/Romeo-RJ-143/Romeo-RJ-Userbot")
 
                 ]
 
@@ -274,13 +274,13 @@ async def help_parser(name, keyboard=None):
 
     return (
 
-        """**🥀 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :
+        """**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :
 
-Gᴇɴɪᴜs UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥...
+  Userbot : `2.0` 🔥...
 
 💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ
 
-Tᴏ Gᴇᴛ Gᴇɴɪᴜs Cᴏᴍᴍᴀɴᴅs ✨...**
+Tᴏ Gᴇᴛ Userbot Cᴏᴍᴍᴀɴᴅs 💥...**
 
 """.format(
 
@@ -300,7 +300,7 @@ async def close(_, CallbackQuery):
 
 @robot.on_callback_query(filters.regex("aditya") & SUDOERS)
 
-async def aditya(_, CallbackQuery):
+async def RomeoRJ(_, CallbackQuery):
 
     text, keyboard = await help_parser(CallbackQuery.from_user.mention)
 
@@ -322,13 +322,13 @@ async def help_button(client, query):
 
     create_match = re.match(r"help_create", query.data)
 
-    top_text = f"""**🥀 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :
+    top_text = f"""**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :
 
-Gᴇɴɪᴜs UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥...
+Userbot : `2.0` 🔥...
 
 💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ
 
-Tᴏ Gᴇᴛ Gᴇɴɪᴜs Cᴏᴍᴍᴀɴᴅs ✨...**
+Tᴏ Gᴇᴛ Userbot Cᴏᴍᴍᴀɴᴅs ✨...**
 
  """
 
@@ -340,7 +340,7 @@ Tᴏ Gᴇᴛ Gᴇɴɪᴜs Cᴏᴍᴍᴀɴᴅs ✨...**
 
             "{} **{}**:\n".format(
 
-                "**🥀 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :** ", HELPABLE[module].__MODULE__
+                "**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :** ", HELPABLE[module].__MODULE__
 
             )
 
