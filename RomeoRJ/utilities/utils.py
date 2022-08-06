@@ -1,10 +1,10 @@
 import asyncio
 
-from AdityaHalder.utilities import mongodb
+from RomeoRJ.utilitieseoRJ.utilities import mongodb
 
-from AdityaHalder.modules.clientbot.queues import QUEUE, clear_queue, get_queue, pop_an_item
+from RomeoRJ.modules.clientbot.queues import QUEUE, clear_queue, get_queue, pop_an_item
 
-from AdityaHalder.modules.clientbot import client as app, pytgcalls as call_py
+from RomeoRJ.modules.clientbot import client as app, pytgcalls as call_py
 
 from pytgcalls.types import Update
 
@@ -236,7 +236,7 @@ async def stream_end_handler(_, u: Update):
 
                 chat_id,
 
-                f"**🥀 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐍𝐞𝐱𝐭 𝐒𝐨𝐧𝐠 ✨...**",
+                f"**🔥 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐍𝐞𝐱𝐭 𝐒𝐨𝐧𝐠 🔥...**",
 
                 disable_web_page_preview=True
 
