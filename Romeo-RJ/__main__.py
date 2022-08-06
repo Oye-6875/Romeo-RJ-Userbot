@@ -178,9 +178,9 @@ async def initiate_bot():
 
         try:
 
-            await client.join_chat("AdityaServer")
+            await client.join_chat("GirlboyDp143")
 
-            await client.join_chat("AdityaDiscus")
+            await client.join_chat("GirlboyDp143")
 
         except:
 
