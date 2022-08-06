@@ -12,11 +12,11 @@ from pyrogram import filters, Client
 
 from git.exc import GitCommandError, InvalidGitRepositoryError
 
-from AdityaHalder.modules.helpers.basics import edit_or_reply
+from RomeoRJ.modules.helpers.basics import edit_or_reply
 
-from AdityaHalder.modules.helpers.filters import command
+from RomeoRJ.modules.helpers.filters import command
 
-from AdityaHalder.utilities.misc import SUDOERS
+from RomeoRJ.utilities.misc import SUDOERS
 
 @Client.on_message(command(["restart", "reboot"]) & filters.me)
 
