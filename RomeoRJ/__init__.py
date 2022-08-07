@@ -54,3 +54,22 @@ LOG_GROUP_ID = LOG_GROUP_ID
 BOT_ID = 0 
 BOT_NAME = "" 
 BOT_USERNAME = "" 
+
+### Assistant Info 
+ASSIDS = [] 
+ASSID = 0 
+ASSNAME = "" 
+ASSUSERNAME = "" 
+ASSMENTION = "" 
+random_assistant = [] 
+
+
+async def initiate_bot():
+    global SUDOERS, OWNER_ID, ASSIDS 
+    global BOT_ID, BOT_NAME, BOT_USERNAME 
+    global ASSID, ASSNAME, ASSMENTION, ASSUSERNAME 
+    global Heroku_cli, Heroku_app 
+    os.system("clear") 
+    header = Table(show_header=True, header_style="bold yellow") 
+    header.add_column( 
+        "RomeoRJ Userbot : Best Ever Userbot"
