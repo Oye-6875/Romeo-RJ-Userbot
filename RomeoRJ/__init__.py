@@ -72,4 +72,13 @@ async def initiate_bot():
     os.system("clear") 
     header = Table(show_header=True, header_style="bold yellow") 
     header.add_column( 
-        "RomeoRJ Userbot : Best Ever Userbot"
+        "RomeoRJ Userbot : Best Ever Userbot" 
+    ) 
+    console.print(header) 
+    with console.status( 
+        "[magenta] RomeoRJ UserBot Booting...", 
+    ) as status: 
+        console.print("┌ [red]Booting Up The Bot Clients...\n") 
+        await robot.start() 
+        console.print("└ [green]Booted Bot Client") 
+        
