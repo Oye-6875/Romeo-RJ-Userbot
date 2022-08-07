@@ -40,8 +40,41 @@ async def initiate_bot():
             imported_module = importlib.import_module( 
                 "RomeoRJ.plugins." + all_module 
             ) 
-            
-              
-              
-              
+            if (
+               hasattr(imported_module, "__MODULE__")
+               and imported_module.__HELP__ 
+            ): 
+              imported_module.__MODULE__ = imported_module.__MODULE__ 
+              if ( 
+                hasattr(imported_module, "__HELP__") 
+                and imported_module.__HELP__ 
+              ):  
+               HELPABLE[ 
+                   imported_module.__MODULE__.lower()
+               ] = imported_module
+       console.print(   
+           f">> [bold cyan]Successfully imported: [green]{all_module}.py" 
+       )  
+   console.print("")
+   status.update(
+     status="[bold blue]Importation Completed!", 
+   ) 
+  console.print( 
+     "[bold green] 🔥 Userbot Started 🔥\n" 
+   ) 
+  try: 
+    await robot.send_message(  
+      LOG_GROUP_ID, 
+      "<b> 🔥 UserBot is Here 🔥</b>", 
+     )
+  except Exception as e: 
+    print( 
+       "\nBot. Has Failed To Access The Log Group, Be Sure You Have Added Your Bot To Your Log Channel And Promoted As Admin❗"
+    )
+    console.print(f"\n[red] Stopping Bot") 
+    return 
+  a = await robot.get_chat_member(LOG_GROUP_ID, BOT_ID) 
+  if a.status != "administrator": 
+    print("Promote Bot As Admin in Logger Group") 
+    
               
