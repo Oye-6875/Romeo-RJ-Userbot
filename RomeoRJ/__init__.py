@@ -127,28 +127,28 @@ async def initiate_bot():
             repo = Repo.init() 
             if "origin" in repo.remotes: 
                 origin = repo.remote("origin") 
-             else: 
+            else: 
                 origin = repo.create_remote("origin", UPSTREAM_REPO) 
-             origin.fetch() 
-             repo.create_head(UPSTREAM_BRANCH, origin.refs[UPSTREAM_BRANCH]) 
-             repo.heads[UPSTREAM_BRANCH].set_tracking_branch( 
-                 origin.refs[UPSTREAM_BRANCH] 
-             ) 
-             repo.heads[UPSTREAM_BRANCH].checkout(True) 
-             try: 
-                nrs.pull(UPSTREAM_BRANCH) 
-             except GitCommandError: 
-                pass
-             nrs = repo.remote("origin") 
-             nrs.fetch(UPSTREAM_BRANCH) 
-             try: 
-                nrs.pull(UPSTREAM_BRANCH) 
-             except GitCommandError:    
-                repo.git.reset("--hard", "FETCH_HEAD") 
-             await install_requirements( 
-                 "pip3 install --no-cache-dir -r Installer" 
-             ) 
-             console.print("└ [red]Git Client Update Completed\n")
+            origin.fetch() 
+            repo.create_head(UPSTREAM_BRANCH, origin.refs[UPSTREAM_BRANCH]) 
+            repo.heads[UPSTREAM_BRANCH].set_tracking_branch( 
+                origin.refs[UPSTREAM_BRANCH] 
+            ) 
+            repo.heads[UPSTREAM_BRANCH].checkout(True) 
+            try: 
+               nrs.pull(UPSTREAM_BRANCH) 
+            except GitCommandError: 
+               pass
+            nrs = repo.remote("origin") 
+            nrs.fetch(UPSTREAM_BRANCH) 
+            try: 
+               nrs.pull(UPSTREAM_BRANCH) 
+            except GitCommandError:    
+               repo.git.reset("--hard", "FETCH_HEAD") 
+            await install_requirements( 
+                "pip3 install --no-cache-dir -r Installer" 
+            ) 
+            console.print("└ [red]Git Client Update Completed\n")
 
  
 loop.run_until_complete(initiate_bot()) 
