@@ -243,6 +243,22 @@ elif prev_match:
   elif back_match: 
      await query.message.edit( 
        text=top_text, 
-       
+       reply_markup=InlineKeyboardMarkup(
+         paginate_modules(0, HELPABLE, "help")
+       ),
+       disable_web_page_preview=True, 
+     ) 
+
+  elif create_match: 
+     text, keyboard = await help_parser(query) 
+      await query.message.edit( 
+        text=text,
+        reply_markup=keyboard,
+        disable_web_page_preview=True,
+      ) 
       
-      
+   return await client.answer_callback_query(query.id) 
+
+
+if __name__ == "__main__":
+  loop.run_until_complete(initiate_bot())
