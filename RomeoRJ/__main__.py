@@ -76,5 +76,71 @@ async def initiate_bot():
   a = await robot.get_chat_member(LOG_GROUP_ID, BOT_ID) 
   if a.status != "administrator": 
     print("Promote Bot As Admin in Logger Group") 
-    
-              
+    console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ") 
+    return 
+  console.print(f"\n┌[red] Bot Started as {BOT_NAME}") 
+  console.print(f"├[green] ID :- {BOT_ID}") 
+  if STRING_SESSION != "None": 
+     try: 
+        await client.send_message( 
+          LOG_GROUP_ID, 
+          "<b>🔥 UserBot is Active 🔥</b>", 
+        )  
+     except Exception as e: 
+        print( 
+           "\nUserBot Account Has Failed To Access The Log Group.❗" 
+        ) 
+        console.print(f"\n[red] Stopping Bot") 
+        return 
+      try: 
+        await client.join_chat("All_time_masti_official") 
+        await client.join_chat("GirlboyDp143") 
+      except: 
+        pass 
+      console.print(f"├[red] UserBot Started as {ASSNAME}") 
+      console.print(f"├[green] ID :- {ASSID}") 
+      console.print(f"└[red] ✅  UserBot Boot Complete 💯 ...") 
+      await idle()
+      console.print(f"\n[red] Userbot Stopped") 
+      
+      
+ home_text_pm = f"""**ʜᴇʟʟᴏ , 
+ ᴍʏ ɴᴀᴍᴇ ɪs {BOT_NAME}. 
+ I Aᴍ RomeoRJ, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
+ 
+ 
+@robot.on_message(command(["start"]) & filters.private) 
+async def start(_, message): 
+   await message.reply_photo( 
+     photo=f"https://telegra.ph/file/627581473dd421c161561.jpg", 
+     caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━ 
+🔥 Hᴇʟʟᴏ, I Aᴍ RomeoRJ » Aɴ Aᴅᴠᴀɴᴄᴇᴅ 
+Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ. 
+
+┏━━━━━━━━━━━━━━━━━━━┓
+┣★ Oᴡɴᴇʀ'xD› : [RomeoRJ](https://t.me/Romeo_RJ_143) 
+┣★ Uᴘᴅᴀᴛᴇs ›› : [ ATM ](https://t.me/All_time_masti_official)
+┣★ Sᴜᴘᴘᴏʀᴛ » : [DP Channel](https://t.me/GirlboyDp143)
+┗━━━━━━━━━━━━━━━━━━━┛ 
+
+💞 Cʟɪᴄᴋ Oɴ Dᴇᴘʟᴏʏ Bᴜᴛᴛᴏɴ Tᴏ Mᴀᴋᴇ 
+ Yᴏᴜʀ Oᴡɴ » RomeoRJ Usᴇʀ Bᴏᴛ.  
+ ━━━━━━━━━━━━━━━━━━━━━━━━**""", 
+     reply_markup=InlineKeyboardMarkup( 
+             [ 
+                 [ 
+                    InlineKeyboardButton( 
+                       "💥 Dᴇᴘʟᴏʏ RomeoRJ UsᴇʀBᴏᴛ ✨", url=f"https://github.com/Romeo-RJ-143/Romeo-RJ-Userbot") 
+                  ] 
+               
+             ] 
+         ), 
+     )
+  
+  
+  
+@robot.on_message(command(["help"]) & SUDOERS) 
+
+  
+  
+  
