@@ -12,8 +12,8 @@ _mongo_async_ = _mongo_client_(config.MONGO_DB_URL)
 
 _mongo_sync_ = MongoClient(config.MONGO_DB_URL)
 
-mongodb = _mongo_async_.RomeoRJ
+mongodb = _mongo_async_.Mongo
 
-pymongodb = _mongo_sync_.RomeoRJ
+pymongodb = _mongo_sync_.Mongo
 
-dbb = _mongo_async_["ROMERJDB"]
+dbb = _mongo_async_["ROMEORJDB"]
