@@ -140,7 +140,109 @@ Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
   
   
 @robot.on_message(command(["help"]) & SUDOERS) 
+async def help_command(_, message): 
+  text, keyboard = await help_parser(message.from_user.mention) 
+  await robot.send_message(LOG_GROUP_ID, text, reply_markup=keyboard) 
+  
+  
+  
+  
+async def help_parser(name, keyboard=None): 
+  if not keyboard: 
+     keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")) 
+  return ( 
+    """**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ : 
+    RomeoRJ UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥... 
+    
+💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ 
+Tᴏ Gᴇᴛ RomeoRJ Cᴏᴍᴍᴀɴᴅs ✨...**
+""".format( 
+           first_name=name 
+       ), 
+       keyboard, 
+    )
 
+@robot.on_callback_query(filters.regex("close") & SUDOERS) 
+async def close(_, CallbackQuery): 
+  await CallbackQuery.message.delete() 
   
+@robot.on_callback_query(filters.regex("aditya") & SUDOERS) 
+async def aditya(_, CallbackQuery): 
+  text, keyboard = await help_parser(CallbackQuery.from_user.mention) 
+  await CallbackQuery.message.edit(text, reply_markup=keyboard) 
   
-  
+
+@robot.on_callback_query(filters.regex(r"help_(.*?)") & SUDOERS) 
+async def help_button(client, query):
+  home_match = re.match(r"help_home\((.+?)\)", query.data) 
+  mod_match = re.match(r"help_module\((.+?)\)", query.data) 
+  prev_match = re.match(r"help_prev\((.+?)\)", query.data) 
+  next_match = re.match(r"help_next\((.+?)\)", query.data) 
+  back_match = re.match(r"help_back", query.data) 
+  create_match = re.match(r"help_create", query.data) 
+  top_text = f"""**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ : 
+RomeoRJ UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥...
+
+💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ 
+Tᴏ Gᴇᴛ RomeoRJ Cᴏᴍᴍᴀɴᴅs ✨...** 
+ """ 
+    if mod_match: 
+        module = mod_match.group(1)
+        text = ( 
+          "{} **{}**:\n".format( 
+            "**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :** ", HELPABLE[module].__MODULE__ 
+          ) 
+          + HELPABLE[module].__HELP__ 
+     )
+     key = InlineKeyboardMarkup( 
+         [ 
+           [ 
+             InlineKeyboardButton( 
+               text="↪️ ʙᴀᴄᴋ", callback_data="help_back" 
+             ), 
+             InlineKeyboardButton( 
+               text="🔄 ᴄʟᴏsᴇ", callback_data="close" 
+             ),
+           ], 
+        ]
+      )
+    
+     await query.message.edit(
+       text=text,
+       reply_markup=key, 
+       disable_web_page_preview=True, 
+     )
+  elif home_match: 
+    out = private_panel() 
+   await robot.send_message( 
+      query.from_user.id, 
+      text=home_text_pm, 
+      reply_markup=InlineKeyboardMarkup(out[1]), 
+   )
+   await query.message.delete() 
+elif prev_match: 
+    curr_page = int(prev_match.group(1)) 
+    await query.message.edit( 
+      text=top_text, 
+      reply_markup=InlineKeyboardMarkup( 
+        paginate_modules(curr_page - 1, HELPABLE, "help") 
+      ),
+      disable_web_page_preview=True, 
+    )
+    
+  elif next_match: 
+    next_page = int(next_match.group(1)) 
+    await query.message.edit( 
+      text=top_text, 
+      reply_markup=InlineKeyboardMarkup( 
+        paginate_modules(next_page + 1, HELPABLE, "help")
+      ), 
+      disable_web_page_preview=True, 
+    )   
+      
+  elif back_match: 
+     await query.message.edit( 
+       text=top_text, 
+       
+      
+      
