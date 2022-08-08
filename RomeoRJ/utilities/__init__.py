@@ -8,7 +8,7 @@ from ..logger import LOGGER
 _mongo_async_ = _mongo_client_(config.MONGO_DB_URL) 
 _mongo_sync_ = MongoClient(config.MONGO_DB_URL) 
 
-mongodb = _mongo_async_.Genius 
-pymongodb = _mongo_sync_.Genius 
+mongodb = _mongo_async_.RomeoRJ
+pymongodb = _mongo_sync_.RomeoRJ
 
-dbb = _mongo_async_["GENIUSDB"]
+dbb = _mongo_async_["ROMEORJDB"]
