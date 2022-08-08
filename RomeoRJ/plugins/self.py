@@ -6,13 +6,13 @@ from pyrogram import Client, filters
 
 from pyrogram.types import Message
 
-from AdityaHalder.modules.clientbot.clientbot import client
+from RomeoRJ.modules.clientbot.clientbot import client
 
-from AdityaHalder.modules.helpers.command import commandpro
+from RomeoRJ.modules.helpers.command import commandpro
 
-from AdityaHalder.modules.helpers.decorators import sudo_users_only, errors
+from RomeoRJ.modules.helpers.decorators import sudo_users_only, errors
 
-from AdityaHalder.utilities.misc import SUDOERS
+from RomeoRJ.utilities.misc import SUDOERS
 
 @Client.on_message(commandpro(["op", "x", ".op"]) & filters.me)
 
