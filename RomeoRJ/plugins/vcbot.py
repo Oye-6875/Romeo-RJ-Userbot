@@ -172,7 +172,7 @@ async def play(c: Client, m: Message):
 
                     await suhu.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                    await aditya.join_group_call(
+                    await RomeoRJ.join_group_call(
 
                         chat_id,
 
@@ -270,7 +270,7 @@ async def play(c: Client, m: Message):
 
                                 await suhu.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                                await aditya.join_group_call(
+                                await RomeoRJ.join_group_call(
 
                                     chat_id,
 
@@ -364,7 +364,7 @@ async def play(c: Client, m: Message):
 
                             await suhu.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                            await aditya.join_group_call(
+                            await RomeoRJ.join_group_call(
 
                                 chat_id,
 
@@ -494,7 +494,7 @@ async def vplay(c: Client, m: Message):
 
                 await loser.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                await aditya.join_group_call(
+                await RomeoRJ.join_group_call(
 
                     chat_id,
 
