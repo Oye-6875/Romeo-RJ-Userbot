@@ -16,7 +16,7 @@ from RomeoRJ.utilities.misc import SUDOERS
 
 async def mother_chod(client: Client, message: Message):
 
-    await edit_or_reply(message, "**I'm alive Romeo_RJ**")
+    await edit_or_reply(message, "**I'm alive 😎**")
 
 __MODULE__ = "Aʟɪᴠᴇ"
 
