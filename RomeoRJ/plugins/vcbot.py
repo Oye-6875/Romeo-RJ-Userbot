@@ -38,7 +38,7 @@ from pytgcalls.types.input_stream.quality import (
 
 from youtubesearchpython import VideosSearch
 
-from AdityaHalder.utilities.misc import SUDOERS
+from RomeoRJ.utilities.misc import SUDOERS
 
 def ytsearch(query: str):
 
@@ -588,7 +588,7 @@ async def vplay(c: Client, m: Message):
 
                                 await loser.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                                await aditya.join_group_call(
+                                await RomeoRJ.join_group_call(
 
                                     chat_id,
 
@@ -688,7 +688,7 @@ async def vplay(c: Client, m: Message):
 
                             await loser.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                            await aditya.join_group_call(
+                            await RomeoRJ.join_group_call(
 
                                 chat_id,
 
@@ -732,7 +732,7 @@ async def pause(client, m: Message):
 
         try:
 
-            await aditya.pause_stream(chat_id)
+            await RomeoRJ.pause_stream(chat_id)
 
             await m.reply(
 
@@ -758,7 +758,7 @@ async def resume(client, m: Message):
 
         try:
 
-            await aditya.resume_stream(chat_id)
+            await RomeoRJ.resume_stream(chat_id)
 
             await m.reply(
 
@@ -852,7 +852,7 @@ async def stop(client, m: Message):
 
         try:
 
-            await aditya.leave_group_call(chat_id)
+            await RomeoRJ.leave_group_call(chat_id)
 
             clear_queue(chat_id)
 
