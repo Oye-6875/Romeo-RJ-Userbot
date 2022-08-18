@@ -10,7 +10,7 @@ from RomeoRJ.utilities.utils import bash, skip_current_song, skip_item
 
 from RomeoRJ.modules.clientbot.queues import QUEUE, add_to_queue, clear_queue
 
-from RomeoRJ.modules.clientbot import client as app, pytgcalls as main
+from RomeoRJ.modules.clientbot import client as app, pytgcalls as romeorj
 
 from RomeoRJ.modules.helpers.decorators import sudo_users_only
 
@@ -270,7 +270,7 @@ async def play(c: Client, m: Message):
 
                                 await suhu.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                                await main.join_group_call(
+                                await romeorj.join_group_call(
 
                                     chat_id,
 
@@ -364,7 +364,7 @@ async def play(c: Client, m: Message):
 
                             await suhu.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                            await main.join_group_call(
+                            await romeorj.join_group_call(
 
                                 chat_id,
 
@@ -494,7 +494,7 @@ async def vplay(c: Client, m: Message):
 
                 await loser.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                await main.join_group_call(
+                await romeorj.join_group_call(
 
                     chat_id,
 
@@ -588,7 +588,7 @@ async def vplay(c: Client, m: Message):
 
                                 await loser.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                                await main.join_group_call(
+                                await romeorj.join_group_call(
 
                                     chat_id,
 
@@ -688,7 +688,7 @@ async def vplay(c: Client, m: Message):
 
                             await loser.edit("**🔄 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...**")
 
-                            await main.join_group_call(
+                            await romeorj.join_group_call(
 
                                 chat_id,
 
@@ -732,7 +732,7 @@ async def pause(client, m: Message):
 
         try:
 
-            await main.pause_stream(chat_id)
+            await romeorj.pause_stream(chat_id)
 
             await m.reply(
 
