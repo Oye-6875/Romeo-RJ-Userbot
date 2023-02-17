@@ -1,47 +1,25 @@
 import re
-
 import asyncio
-
 from RomeoRJ.modules.cache.admins import admins
-
 from RomeoRJ.modules.helpers.filters import command
-
 from RomeoRJ.utilities.utils import bash, skip_current_song, skip_item
-
 from RomeoRJ.modules.clientbot.queues import QUEUE, add_to_queue, clear_queue
-
 from RomeoRJ.modules.clientbot import client as app, pytgcalls as romeorj
-
 from RomeoRJ.modules.helpers.decorators import sudo_users_only
-
 from pyrogram import Client, filters
-
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
-
 from pyrogram.types import Message
-
 from pytgcalls import StreamType
-
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-
 from pytgcalls.types.input_stream.quality import (
-
     HighQualityAudio,
-
     HighQualityVideo,
-
     LowQualityVideo,
-
     MediumQualityVideo,
-
 )
-
 from youtubesearchpython import VideosSearch
-
 from RomeoRJ.utilities.misc import SUDOERS
-
 def ytsearch(query: str):
-
     try:
 
         search = VideosSearch(query, limit=1).result()
