@@ -113,29 +113,14 @@ async def initiate_bot():
 async def start(_, message): 
    await message.reply_photo( 
      photo=f"https://telegra.ph/file/627581473dd421c161561.jpg", 
-     caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━ 
-🔥 Hᴇʟʟᴏ, I Aᴍ RomeoRJ » Aɴ Aᴅᴠᴀɴᴄᴇᴅ 
+     caption=f"""
+**━━━━━━━━━━━━━━━━━━━
+🔥 Hᴇʟʟᴏ, I Aᴍ RomeoRJ
 Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ. 
 
-┏━━━━━━━━━━━━━━━━━━━┓
-┣★ Oᴡɴᴇʀ'xD› : [RomeoRJ](https://t.me/Romeo_RJ_143) 
-┣★ Uᴘᴅᴀᴛᴇs ›› : [ ATM ](https://t.me/All_time_masti_official)
-┣★ Sᴜᴘᴘᴏʀᴛ » : [DP Channel](https://t.me/GirlboyDp143)
-┗━━━━━━━━━━━━━━━━━━━┛ 
-
-💞 Cʟɪᴄᴋ Oɴ Dᴇᴘʟᴏʏ Bᴜᴛᴛᴏɴ Tᴏ Mᴀᴋᴇ 
- Yᴏᴜʀ Oᴡɴ » RomeoRJ Usᴇʀ Bᴏᴛ.  
- ━━━━━━━━━━━━━━━━━━━━━━━━**""", 
-     reply_markup=InlineKeyboardMarkup( 
-             [ 
-                 [ 
-                    InlineKeyboardButton( 
-                       "💥 Dᴇᴘʟᴏʏ RomeoRJ UsᴇʀBᴏᴛ ✨", url=f"https://github.com/Romeo-RJ-143/Romeo-RJ-Userbot") 
-                  ] 
-               
-             ] 
-         ), 
-     )
+💞 Enjoy RomeoRJ Usᴇʀ Bᴏᴛ.  
+ ━━━━━━━━━━━━━━━━━━━━**
+""",)
   
   
   
@@ -143,16 +128,13 @@ Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
 async def help_command(_, message): 
   text, keyboard = await help_parser(message.from_user.mention) 
   await robot.send_message(LOG_GROUP_ID, text, reply_markup=keyboard) 
-  
-  
-  
-  
+    
 async def help_parser(name, keyboard=None): 
   if not keyboard: 
      keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")) 
   return ( 
     """**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ : 
-    RomeoRJ UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥... 
+    RomeoRJ UsᴇʀBᴏᴛ Vᴇʀ : `1.0` 🔥... 
     
 💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ 
 Tᴏ Gᴇᴛ RomeoRJ Cᴏᴍᴍᴀɴᴅs ✨...**
@@ -181,7 +163,7 @@ async def help_button(client, query):
   back_match = re.match(r"help_back", query.data) 
   create_match = re.match(r"help_create", query.data) 
   top_text = f"""**🔥 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ : 
-RomeoRJ UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥...
+RomeoRJ UsᴇʀBᴏᴛ Vᴇʀ : `1.0` 🔥...
 
 💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ 
 Tᴏ Gᴇᴛ RomeoRJ Cᴏᴍᴍᴀɴᴅs ✨...** 
