@@ -1,11 +1,11 @@
 import asyncio
 from re import sub
 from threading import Event
-
-from pyrogram import Client, enums, filters
+from pyrogram import Client, filters
+#from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
-from config import LOG_GROUP_ID as LOG_GROUP
+from RomeoRJ.config import LOG_GROUP_ID as LOG_GROUP
 from RomeoRJ.utilities.misc import SUDOERS
 
 
@@ -114,6 +114,7 @@ async def spam_stick(client: Client, message: Message):
             "**reply to a sticker with amount you want to spam**"
         )
         return
+"""
     else:
         i = 0
         times = message.command[1]
@@ -125,13 +126,12 @@ async def spam_stick(client: Client, message: Message):
                     sticker,
                 )
                 await asyncio.sleep(0.10)
-
         if message.chat.type == enums.ChatType.PRIVATE:
             for i in range(int(times)):
                 sticker = message.reply_to_message.sticker.file_id
                 await client.send_sticker(message.chat.id, sticker)
                 await asyncio.sleep(0.10)
-
+"""
 
 __MODULE__ = "Spam"
 __HELP__ = f"""
