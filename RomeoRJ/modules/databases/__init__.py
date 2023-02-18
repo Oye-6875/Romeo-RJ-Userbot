@@ -1,5 +1,3 @@
-# RomeoRJ 
-
 import json 
 import threading 
 import dns.resolver 
