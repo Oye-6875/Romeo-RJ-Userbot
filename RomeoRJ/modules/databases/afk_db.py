@@ -1,8 +1,6 @@
 import asyncio
 from RomeoRJ.modules.databases import cli
-
-collection = cli["Kaal"]["afk"]
-
+collection = cli["Romeo"]["afk"]
 async def set_afk(afk_status, afk_since, reason):
     doc = {"_id": 1, "afk_status": afk_status}
     r = await collection.find_one({"_id": 1})
