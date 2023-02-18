@@ -1,5 +1,5 @@
 from RomeoRJ.modules.databases import cli
-filter = cli["Kaal"]["FILTER"]
+filter = cli["Romeo"]["FILTER"]
 
 async def add_filters(keyword, chat_id, message_id) -> None:
     add = await filter.find_one({"keyword": keyword})
