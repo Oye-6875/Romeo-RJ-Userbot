@@ -1,6 +1,5 @@
 from RomeoRJ.modules.databases import cli as db_x
 fed_s = db_x["FEDS"]
-
 async def add_fed(feds):
     await fed_s.insert_one({"fed_s": feds})
 async def rmfed(feds):
