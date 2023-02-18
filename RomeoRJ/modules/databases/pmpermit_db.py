@@ -1,6 +1,6 @@
 import asyncio
 from RomeoRJ.modules.databases import cli
-collection = cli["Kaal"]["pmpermit"]
+collection = cli["Romeo"]["pmpermit"]
 
 PMPERMIT_MESSAGE = (
     "**ᴡᴀʀɴɪɴɢ!⚠️ ᴘʟᴢ ʀᴇᴀᴅ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴄᴀʀᴇꜰᴜʟʟʏ..\n\n**"
