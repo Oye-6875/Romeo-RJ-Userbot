@@ -1,5 +1,5 @@
 from RomeoRJ.modules.databases import cli
-collection = cli["Kaal"]["rraid"]
+collection = cli["Romeo"]["rraid"]
 async def rraid_user(chat):
     doc = {"_id": "Rraid", "users": [chat]}
     r = await collection.find_one({"_id": "Rraid"})
