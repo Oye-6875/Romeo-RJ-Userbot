@@ -98,7 +98,7 @@ async def sspam(client: Client, message: Message):
         await asyncio.sleep(cooldown[message.command[0]])
 
 
-@Client.on_message(filters.command(["["sspam", "stkspam", "spamstk", "stickerspam"], ["/", ".", "!"]) & SUDOERS)
+@Client.on_message(filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], ["/", ".", "!"]) & SUDOERS)
 async def spam_stick(client: Client, message: Message):
     if message.chat.id in BLACKLIST_CHAT:
         return await message.reply_text(
