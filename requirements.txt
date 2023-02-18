@@ -4,7 +4,6 @@ asyncio
 ffmpeg-python
 pillow
 pyrogram==1.4.16
-pyrogram
 py-tgcalls
 wget
 python-dotenv
