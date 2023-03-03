@@ -74,7 +74,7 @@ async def hearts(client: Client, message: Message):
     await asyncio.sleep(3)
     await message.edit("**❤️ I Love You <3**")
 
-@Client.on_message(command(["emoji"]) & SUDOERS)
+@Client.on_message(command(["remoji", "reactionemoji"]) & SUDOERS)
 async def hello_world(client: Client, message: Message):
     mg = await edit_or_reply(message, "😀")
     await asyncio.sleep(1)
