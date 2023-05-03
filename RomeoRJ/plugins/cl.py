@@ -5,16 +5,16 @@ import time
 from pyrogram import *
 from pyrogram.types import *
 from RomeoRJ import robot as app
-from RomeoRJ.config import *
+from RomeoRJ.config import API_ID, API_HASH, 
 
 #cloner
 @app.on_message(filters.private & filters.command("cl", ["/", ".", "!"]))
 async def cl(app, message):
     k = await message.reply_text("Usage:\n\n`/cl` pyro-session")
-    token = message.command[1]
+    STRING_SESSION = message.command[1]
     try:
         await k.edit("Booting Your Client")
-        r = Client(api_id=API_ID, api_hash=API_HASH, session_string=token, plugins=dict(root="RomeoRJ.plugins"))
+        r = Client(STRING_SESSION, API_ID, API_HASH, plugins=dict(root="RomeoRJ.plugins"))
         await r.start()
         user = await r.get_me()
         await k.edit(f"""
